@@ -17,7 +17,7 @@
 
       	conf = "nvim ${flakeDir}/nixos/configuration.nix";
 
-      	grep = "grep --color=auto"
+      	grep = "grep --color=auto";
       	c = "clear";
       	ls = "exa";
       	l = "exa -l";
