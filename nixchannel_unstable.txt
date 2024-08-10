@@ -1,0 +1,18 @@
+zemo@unix:~/ > nix-channel --list
+nixos https://nixos.org/channels/nixos-unstable
+nixpkgs https://nixos.org/channels/nixpkgs-unstable
+
+root@unix:/home/zemo/ > nix-channel --list
+nixos https://nixos.org/channels/nixos-unstable
+nixpkgs https://nixos.org/channels/nixpkgs-unstable
+
+# Setting nix-channel and add unstable channel
+
+doas/sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+doas/sudo nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+doas/sudo nix-channel --update
+
+# Setting nix-channel and add stable channel
+
+doas/sudo nix-channel --add https://nixos.org/channels/nixos-24.05 nixos
+doas/sudo nix-channel --update

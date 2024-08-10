@@ -1,0 +1,11 @@
+Когда nixos-rebuild switch не получается запускаться иза проблем с nixos-config,есть решение :
+        doas nixos-rebuild switch -I nixos-config=/etc/nixos/configuration.nix
+Всё про каналы в никс ос
+    nix-channel --update
+    nix-channel --list
+    nix-channel --add links
+
+Показ и удаление предыдущих поколений:
+    nix-env -p /nix/var/nix/profiles/system --list-generations
+
+    nix-collect-garbage -d (удаление)
