@@ -15,8 +15,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "unix"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
@@ -35,9 +33,9 @@
 "nvidia-x11"
 "nvidia-settings"
 "nvidia-persistenced" 
-"steam"
-"steam-original"
-"steam-run"
+#"steam"
+#"steam-original"
+#"steam-run"
   ];
   services.xserver.videoDrivers = ["nvidia"];
 
@@ -48,7 +46,7 @@
 
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
 
   };
 
@@ -94,7 +92,6 @@ environment.gnome.excludePackages = with pkgs; [
   # Configure keymap in X11
   services.xserver = {
   xkb.layout = "us,ru";
-  #если я хочу использовать кверти мне надо просто удалить строку дворак
   xkb.options = "grp:alt_shift_toggle";
 };
 
@@ -227,11 +224,11 @@ gnomeExtensions.add-to-desktop
 virt-manager
 
 # Emacs
-emacs
-ripgrep
-coreutils
+#emacs
+#ripgrep
+#coreutils
 clang
-fd
+#fd
 
 qbittorrent # torrent
 # Wine
@@ -271,13 +268,13 @@ wineWowPackages.stable
 
 
 # Steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-};
-  programs.steam.gamescopeSession.enable = true;
+#  programs.steam = {
+#    enable = true;
+#    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+#    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+#    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+#};
+#  programs.steam.gamescopeSession.enable = true;
 # Flatpak
 services.flatpak.enable = true;
 
