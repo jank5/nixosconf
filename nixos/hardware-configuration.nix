@@ -4,12 +4,11 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
@@ -23,6 +22,12 @@
     { device = "/dev/disk/by-uuid/90D8-5CFE";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
+    };
+
+  fileSystems."/Drivers/Games2tb" =
+    { device = "/dev/disk/by-uuid/821a7335-d0d9-40bc-88bd-f8b9aef4f063";
+      fsType = "ext4";
+      options = [ "default" "nofail" ];
     };
 
   swapDevices =
