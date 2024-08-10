@@ -5,5 +5,6 @@
 	./git.nix
 	./bash.nix
 	./zoxide.nix
+	./neovim.nix
  ];
 }
