@@ -33,9 +33,9 @@
 "nvidia-x11"
 "nvidia-settings"
 "nvidia-persistenced" 
-#"steam"
-#"steam-original"
-#"steam-run"
+"steam"
+"steam-original"
+"steam-run"
   ];
   services.xserver.videoDrivers = ["nvidia"];
 
@@ -246,7 +246,7 @@ wineWowPackages.stable
 
 # Configure font
   fonts.packages = with pkgs; [
-        (nerdfonts.override { fonts = [ "Hack" "Monaspace" "NerdFontsSymbolsOnly" ]; })
+  (nerdfonts.override { fonts = [ "Hack" "Monaspace" "NerdFontsSymbolsOnly" ]; })
 	font-awesome	
 	nerdfonts
 	comic-relief
@@ -268,13 +268,13 @@ wineWowPackages.stable
 
 
 # Steam
-#  programs.steam = {
-#    enable = true;
-#    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-#    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-#    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-#};
-#  programs.steam.gamescopeSession.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+};
+  programs.steam.gamescopeSession.enable = true;
 # Flatpak
 services.flatpak.enable = true;
 
