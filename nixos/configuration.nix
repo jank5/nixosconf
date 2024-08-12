@@ -31,8 +31,8 @@ services.pipewire = {
 };
 
 # Enabling Pulseaudio
-#  hardware.pulseaudio.enable = true;
-#  hardware.pulseaudio.support32Bit = true;  
+  hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.support32Bit = true;  
   # Enable OpenGL
   hardware.opengl.enable = true;
   
