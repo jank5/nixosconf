@@ -21,14 +21,14 @@
   time.timeZone = "Europe/Moscow";
 
 
-security.rtkit.enable = true;
-services.pipewire = {
-  enable = true;
-  alsa.enable = true;
-  alsa.support32Bit = true;
-  pulse.enable = false;
+#security.rtkit.enable = true;
+#services.pipewire = {
+#  enable = true;
+#  alsa.enable = true;
+#  alsa.support32Bit = true;
+#  pulse.enable = false;
   #jack.enable = true;
-};
+#};
 
 # Enabling Pulseaudio
   hardware.pulseaudio.enable = true;
