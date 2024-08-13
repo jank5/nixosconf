@@ -27,7 +27,7 @@
   fileSystems."/Drivers/Games2tb" =
     { device = "/dev/disk/by-uuid/821a7335-d0d9-40bc-88bd-f8b9aef4f063";
       fsType = "ext4";
-      options = [ "default" "nofail" ];
+#      options = [ "default" "nofail" ];
     };
 
   swapDevices =
