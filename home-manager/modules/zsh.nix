@@ -6,6 +6,11 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+
+    initExtra = ''
+    export EDITOR=nvim
+    '';
+
     shellAliases =
       let
         flakeDir = "~/nix";
