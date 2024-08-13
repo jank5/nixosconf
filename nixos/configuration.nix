@@ -57,7 +57,6 @@ services.pipewire = {
     open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-
   };
 
   # Configure network proxy if necessary
@@ -75,7 +74,7 @@ services.pipewire = {
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-# KDE Plasma 6
+# KDE Plasma 6(If i want change DE to plasma6, just uncomment this line)
   #services.xserver.enable = true;
   #services.displayManager.sddm.enable = true;
   #services.desktopManager.plasma6.enable = true;
@@ -87,16 +86,25 @@ services.pipewire = {
 #	oxygen
 # ];  
 
-# GNOME
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-};
-  
-environment.gnome.excludePackages = with pkgs; [
-  gnome-photos
-  gnome-tour
+# GNOME(Also if i want to change DE to Gnome, just uncomment this line)
+#  services.xserver = {
+#    enable = true;
+#    displayManager.gdm.enable = true;
+#    desktopManager.gnome.enable = true;
+#};
+#environment.gnome.excludePackages = with pkgs; [
+#  gnome-photos
+#  gnome-tour
+#];
+
+# Plasma5
+services.xserver.enable = true;
+services.displayManager.sddm.enable = true;
+services.xserver.desktopManager.plasma5.enable = true;
+environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  plasma-browser-integration
+  konsole
+  oxygen
 ];
 
   # Configure keymap in X11
