@@ -174,6 +174,7 @@ floorp
 chromium
 brave
 
+libreoffice
 #home-manager
 protonup-ng
 mangohud
