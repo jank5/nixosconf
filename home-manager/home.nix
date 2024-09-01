@@ -21,6 +21,12 @@
 	qdirstat
 	gsmartcontrol
 	eza
+# Emacs packages
+emacs
+ripgrep
+fd
+clang
+coreutils
   ];
 
   home.file = {
