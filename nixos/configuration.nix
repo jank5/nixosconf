@@ -257,7 +257,7 @@ qbittorrent # torrent
 # Wine
 wineWowPackages.stable
 # Games
-osu-lazer
+#osu-lazer
 ];
 
 # Configuration doas
