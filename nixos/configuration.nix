@@ -256,6 +256,8 @@ clang
 qbittorrent # torrent
 # Wine
 wineWowPackages.stable
+# Games
+osu-lazer
 ];
 
 # Configuration doas
