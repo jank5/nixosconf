@@ -73,6 +73,25 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  services={
+        xserver = {
+            enable = true;
+
+            windowManager.awesome = {
+                enable = true;
+                luaModules = with pkgs.luaPackages; [
+                    luarocks # is the package manager for Lua modules
+                    luadbi-mysql # Database abstraction layer
+                ];
+
+            };
+        };
+
+        displayManager = {
+            sddm.enable = true;
+            defaultSession = "none+awesome";
+        };
+    };
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -101,15 +120,15 @@
 # ];  
 
 # GNOME(Also if i want to change DE to Gnome, just uncomment this line)(And need uncomment package extensions)
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-};
-environment.gnome.excludePackages = with pkgs; [
-  gnome-photos
-  gnome-tour
-];
+#   services.xserver = {
+#     enable = true;
+#     displayManager.gdm.enable = true;
+#     desktopManager.gnome.enable = true;
+# };
+# environment.gnome.excludePackages = with pkgs; [
+#   gnome-photos
+#   gnome-tour
+# ];
 
   # Configure keymap in X11
   services.xserver = {
@@ -226,22 +245,22 @@ xorg.xf86videoati
 xorg.xf86videonouveau
 
 #GNOME TOOLS(If i want to use gnome, need uncomment)
-gnome.gnome-tweaks
-gnome.gnome-power-manager
-gnome.gnome-color-manager
-gnome.gnome-shell-extensions
+# gnome.gnome-tweaks
+# gnome.gnome-power-manager
+# gnome.gnome-color-manager
+# gnome.gnome-shell-extensions
 
 #GNOME EXTENSIONS(If i want to use gnome, need uncomment)
-gnomeExtensions.burn-my-windows
-gnomeExtensions.dash-to-dock
-gnomeExtensions.blur-my-shell
-gnomeExtensions.app-icons-taskbar
-gnomeExtensions.user-themes
-gnomeExtensions.arcmenu
-gnomeExtensions.appindicator
-gnomeExtensions.vitals
-gnomeExtensions.gtk4-desktop-icons-ng-ding # new
-gnomeExtensions.add-to-desktop
+# gnomeExtensions.burn-my-windows
+# gnomeExtensions.dash-to-dock
+# gnomeExtensions.blur-my-shell
+# gnomeExtensions.app-icons-taskbar
+# gnomeExtensions.user-themes
+# gnomeExtensions.arcmenu
+# gnomeExtensions.appindicator
+# gnomeExtensions.vitals
+# gnomeExtensions.gtk4-desktop-icons-ng-ding # new
+# gnomeExtensions.add-to-desktop
 
 # Virtmanager
 virt-manager
@@ -254,10 +273,7 @@ clang
 #fd
 
 qbittorrent # torrent
-# Wine
 wineWowPackages.stable
-# Games
-#osu-lazer
 ];
 
 # Configuration doas
