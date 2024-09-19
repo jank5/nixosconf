@@ -60,7 +60,7 @@
     open = false;
 
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
 # GNOME(Also if i want to change DE to Gnome, just uncomment this line)(And need uncomment package extensions)
