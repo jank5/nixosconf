@@ -269,7 +269,6 @@ services.flatpak.enable = true;
     GDK_DPI_SCALE = "0.5";
     _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
   };
-  hardware.video.hidpi.enable = true;
 
   system.stateVersion = "24.11"; # Did you read the comment?
 }
