@@ -8,30 +8,24 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/12288aa9-b9ef-44ba-8b3a-88c92d1b3ca7";
+    { device = "/dev/disk/by-uuid/3849b7ed-f220-473c-a801-9bcc8db80920";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/90D8-5CFE";
+    { device = "/dev/disk/by-uuid/6E27-58F3";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  fileSystems."/Drivers/Games2tb" =
-    { device = "/dev/disk/by-uuid/821a7335-d0d9-40bc-88bd-f8b9aef4f063";
-      fsType = "ext4";
-#      options = [ "default" "nofail" ];
-    };
-
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/9d4598c7-63df-439a-b8db-33299409f51b"; }
+    [ { device = "/dev/disk/by-uuid/07ffcc0d-953a-454e-ac4b-62e8e9c63358"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

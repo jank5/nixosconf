@@ -27,6 +27,7 @@
       efiSupport = true;
     };
   };
+# hostname
   networking.hostName = "unix"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
@@ -66,8 +67,11 @@
 # GNOME(Also if i want to change DE to Gnome, just uncomment this line)(And need uncomment package extensions)
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
+    #displayManager.gdm.enable = true;
+    displayManager.lightdm.enable = true;
     desktopManager.gnome.enable = true;
+    windowManager.dwm.enable = true;
+    windowManager.awesome.enable = true;
 };
 environment.gnome.excludePackages = with pkgs; [
   gnome-photos
@@ -79,6 +83,17 @@ environment.gnome.excludePackages = with pkgs; [
   xkb.layout = "us,ru";
   xkb.options = "grp:alt_shift_toggle";
 };
+
+# DWM
+services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+  src = ./home/zemo/dwm;
+};
+  # nixpkgs.overlays = [
+  #   (final: prev: {
+  #     dwm = prev.dwm.overrideAttrs (old: { src = ./home/zemo/suckless/dwm ;});
+  #     #dmenu = prev.dmenu.overrideAttrs (old: { src = /home/jacinth/dmenu ;});
+  #   })
+  # ];
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
