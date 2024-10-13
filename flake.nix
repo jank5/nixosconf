@@ -9,9 +9,6 @@
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs-unstable";
 	  };
-	  # nixos-dotf = {
-	   # url = "git+ssh://git@github.com:jank5/nixosconf.git";
-	  # };
  };
 	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
 	let
