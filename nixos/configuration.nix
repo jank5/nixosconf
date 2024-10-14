@@ -67,12 +67,19 @@
 # GNOME(Also if i want to change DE to Gnome, just uncomment this line)(And need uncomment package extensions)
   services.xserver = {
     enable = true;
-    #displayManager.gdm.enable = true;
-    displayManager.lightdm.enable = true;
+    # displayManager.gdm.enable = true;
+    # displayManager.lightdm.enable = true;
+    displayManager.startx.enable = true;
     desktopManager.gnome.enable = true;
     windowManager.dwm.enable = true;
     windowManager.awesome.enable = true;
 };
+
+# DWM custom build
+services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+  src = /home/zemo/dwm;
+};
+
 environment.gnome.excludePackages = with pkgs; [
   gnome-photos
   gnome-tour
@@ -84,16 +91,7 @@ environment.gnome.excludePackages = with pkgs; [
   xkb.options = "grp:alt_shift_toggle";
 };
 
-# DWM
-services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
-  src = ./home/zemo/dwm;
-};
-  # nixpkgs.overlays = [
-  #   (final: prev: {
-  #     dwm = prev.dwm.overrideAttrs (old: { src = ./home/zemo/suckless/dwm ;});
-  #     #dmenu = prev.dmenu.overrideAttrs (old: { src = /home/jacinth/dmenu ;});
-  #   })
-  # ];
+
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -142,6 +140,14 @@ obs-studio
 syncthing
 git
 btop
+rofi
+xclip
+xsel
+xcolor
+dunst
+ranger
+dwmblocks
+nwg-look
 
 # Music
 alsa-oss 
@@ -202,6 +208,10 @@ xorg.xf86inputlibinput
 xorg.xf86videointel
 xorg.xf86videoati
 xorg.xf86videonouveau
+xorg.libXinerama
+xorg.libX11
+xorg.libXft
+xorg.libXi
 
 #GNOME TOOLS(If i want to use gnome, need uncomment)
 gnome.gnome-tweaks
@@ -277,6 +287,7 @@ wineWowPackages.stable
   programs.steam.gamescopeSession.enable = true;
 # Flatpak
 services.flatpak.enable = true;
+
 
 # Display Setting Monitor
   system.stateVersion = "24.11"; # Did you read the comment?

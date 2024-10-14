@@ -10,6 +10,7 @@
     initExtra = ''
     export EDITOR=nvim
     eval "$(ssh-agent -s)"
+    wal -R && clear && pfetch
     '';
 
     shellAliases =
@@ -25,9 +26,7 @@
 
       	grep = "grep --color=auto";
       	c = "clear";
-      	ls = "exa";
-      	l = "exa -l";
-      	la = "exa -la";
+      	e = "emacs";
       	v = "nvim";
       	dv = "doas nvim";
       	ff = "fastfetch";
@@ -36,6 +35,20 @@
 	      ".3" = "cd ../../..";
 	      ".4" = "cd ../../../..";
 	      ".5" = "cd ../../../../..";
+        ld = "lsd";
+        lf = "lsd -F";
+        ls = "eza -al --color=always --group-directories-first"; # my preferred listing
+        la = "eza -a --color=always --group-directories-first";  # all files and dirs
+        ll = "eza -l --color=always --group-directories-first"; # long format
+        lt = "eza -aT --color=always --group-directories-first"; # tree listing
+        "l." = "eza -al --color=always --group-directories-first ../"; # ls on the PARENT directory
+        "l.." = "eza -al --color=always --group-directories-first ../../"; # ls on directory 2 levels up
+        "l..." = "eza -al --color=always --group-directories-first ../../../"; # ls on directory 3 levels
+        df = "df -h";               # human-readable sizes
+        free = "free -m";           # show sizes in MB
+        killdwm = "pkill -KILL -u $USER";
+        chqwe = "setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:alt_shift_toggle";
+        chdvk = "setxkbmap -model pc105 -layout us,ru -variant dvorak -option grp:alt_shift_toggl";
     };
 
     oh-my-zsh = {

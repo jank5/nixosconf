@@ -21,6 +21,7 @@
 	qdirstat
 	gsmartcontrol
 	eza
+	lsd
 # Emacs packages
 emacs
 ripgrep
