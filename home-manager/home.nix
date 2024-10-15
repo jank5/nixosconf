@@ -17,9 +17,11 @@
 	multimarkdown
 	texlivePackages.markdown
 	gjs
+	matugen
 # Disk check utils
 	qdirstat
 	gsmartcontrol
+# Alternative ls
 	eza
 	lsd
 # Emacs packages
