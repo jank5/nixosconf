@@ -235,11 +235,11 @@ gnomeExtensions.add-to-desktop
 virt-manager
 
 # Emacs
-#emacs
-#ripgrep
-#coreutils
+emacs
+ripgrep
+coreutils
 clang
-#fd
+fd
 
 qbittorrent # torrent
 wineWowPackages.stable

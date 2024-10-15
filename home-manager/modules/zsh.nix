@@ -10,7 +10,7 @@
     initExtra = ''
     export EDITOR=nvim
     eval "$(ssh-agent -s)"
-    wal -R && clear && pfetch
+    clear && pfetch
     '';
 
     shellAliases =
