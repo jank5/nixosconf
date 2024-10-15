@@ -9,6 +9,9 @@
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs-unstable";
 	  };
+  	  matugen = {
+    		url = "github:/InioX/Matugen";
+  	  };
  };
 	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
 	let
@@ -24,6 +27,9 @@
     ];
    };
   };
+	  environment.systemPackages = with pkgs; [
+		  inputs.matugen.packages.${system}.default
+    ];
 	  homeConfigurations =  {
               zemo = home-manager.lib.homeManagerConfiguration {
 	      inherit pkgs;
