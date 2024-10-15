@@ -9,9 +9,9 @@
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs-unstable";
 	  };
-  	  matugen = {
-    		url = "github:/InioX/Matugen";
-  	  };
+  	  # matugen = {
+    		# url = "github:/InioX/Matugen";
+  	  # };
  };
 	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
 	let
