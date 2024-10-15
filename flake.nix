@@ -27,9 +27,6 @@
     ];
    };
   };
-	  environment.systemPackages = with pkgs; [
-		  inputs.matugen.packages.${system}.default
-    ];
 	  homeConfigurations =  {
               zemo = home-manager.lib.homeManagerConfiguration {
 	      inherit pkgs;
