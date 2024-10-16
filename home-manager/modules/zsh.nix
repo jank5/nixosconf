@@ -26,7 +26,7 @@
 
       	grep = "grep --color=auto";
       	c = "clear";
-      	e = "emacs";
+      	e = "emacs -nw";
       	v = "nvim";
       	dv = "doas nvim";
       	ff = "fastfetch";
