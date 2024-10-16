@@ -1,0 +1,11 @@
+[alias]
+  a = "add"
+  c = "commit"
+  ca = "commit -a"
+  f = "fetch"
+  cl = "clone"
+  d = "diff"
+  ps = "push"
+  st = "status"
+  lol = "log --graph --decorate --pretty=oneline --abbrev-commit"
+  lola = "log --graph --decorate --pretty=oneline --abbrev-commit --all"

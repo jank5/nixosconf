@@ -3,21 +3,12 @@
 		enable = true;
 		userName = "jank5";
 		userEmail = "klevzhic5jank@gmail.com";
+		extraConfig = {
+		  safe.directory = "*";
+		};
+		includes = [
+			{ path = "/home/zemo/nixosconf/home-manager/modules/gitalias.txt"; }
+		];
  };
-  aliases = {
- 		a = "add";
- 		c = "commit";
- 		ca = "commit -a";
- 		f = "fetch";
- 		cl = "clone";
- 		d = "diff";
- 		ps = "push";
- 		st = "status";
- 		lol = "log --graph --decorate --pretty=oneline --abbrev-commit";
-		lola = "log --graph --decorate --pretty=oneline --abbrev-commit --all";
- 	};
- 	safe = {
- 	directory = "*"
- 	};
 }
 
