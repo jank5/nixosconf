@@ -1,19 +1,10 @@
 { config, lib, pkgs, ... }:
 {
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = [
       ./hardware-configuration.nix
       ./packages.nix
-      ./modules/openssh.nix
-      ./modules/steam.nix
-      ./modules/nvidia.nix
-      ./modules/flatpak.nix
-      ./modules/stylix.nix
-      ./modules/doas.nix
+      ./modules/bundle.nix
     ];
-
- # boot.loader.systemd-boot.enable = true;
- # boot.loader.efi.canTouchEfiVariables = true;
 
   # GRUB
   boot.loader = {
@@ -30,15 +21,17 @@
   };
 
 # Hostname
-  networking.hostName = "unix"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  # Set your time zone.
+  networking.hostName = "unix";
+  networking.networkmanager.enable = true;
+# Set your time zone.
   time.timeZone = "Europe/Moscow";
+
 # Enabling Pulseaudio
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.support32Bit = true;
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
 
+# XSERVER
   services.xserver = {
     enable = true;
 #    displayManager = {
@@ -52,7 +45,7 @@
   # KDE PLASMA 6
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-#  services.xserver.desktopManager.plasma6.cursorTheme = "Bibata-Modern-Ice";
+  services.xserver.desktopManager.plasma6.cursorTheme = "Bibata-Modern-Ice";
 
 # DWM
   nixpkgs.overlays = [
@@ -96,7 +89,6 @@ environment.gnome.excludePackages = with pkgs; [
 # LibVirtd
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
-  #services.qemuGuest.enable = true; # if need into guest
 
   system.stateVersion = "24.05";
 }

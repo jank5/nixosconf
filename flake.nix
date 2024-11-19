@@ -9,12 +9,12 @@
 	  url = "github:nix-community/home-manager";
 	  inputs.nixpkgs.follows = "nixpkgs-unstable";
 	  };
-  stylix = {
-    url = "github:danth/stylix";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
+#  stylix = {
+#    url = "github:danth/stylix";
+#    inputs.nixpkgs.follows = "nixpkgs";
+#  };
  };
-	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
+	outputs = { stylix, self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
 	let
 	   lib = nixpkgs.lib;
 	   system = "x86_64-linux";
@@ -25,7 +25,7 @@
 	      inherit system;
 	      modules = [
 		./nixos/configuration.nix
-		inputs.stylix.nixosModules.stylix
+#		inputs.stylix.nixosModules.stylix
     ];
    };
   };
