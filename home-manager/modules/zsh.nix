@@ -29,7 +29,7 @@
       	c = "clear";
       	cm = "/usr/bin/cm";
       	e = "emacs -nw";
-      	v = "emacs -nw";
+      	v = "nvim";
       	dv = "doas nvim";
       	ff = "fastfetch";
 	      ".." = "cd ..";
