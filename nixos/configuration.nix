@@ -8,7 +8,7 @@
       ./modules/steam.nix
       ./modules/nvidia.nix
       ./modules/flatpak.nix
-#      ./modules/stylix.nix
+      ./modules/stylix.nix
       ./modules/doas.nix
     ];
 
