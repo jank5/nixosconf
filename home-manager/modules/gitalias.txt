@@ -7,5 +7,6 @@
   d = "diff"
   ps = "push"
   st = "status"
+  psh = "push -u origin main"
   lol = "log --graph --decorate --pretty=oneline --abbrev-commit"
   lola = "log --graph --decorate --pretty=oneline --abbrev-commit --all"

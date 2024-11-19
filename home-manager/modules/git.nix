@@ -4,7 +4,8 @@
 		userName = "jank5";
 		userEmail = "klevzhic5jank@gmail.com";
 		extraConfig = {
-		  safe.directory = "/home/zemo/nixosconf/.git";
+      init.defaultBranch = "main";
+		  safe.directory = "/home/zemo/nixosconf/";
 		};
 		includes = [
 			{ path = "/home/zemo/nixosconf/home-manager/modules/gitalias.txt"; }

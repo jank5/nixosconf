@@ -6,5 +6,7 @@
 	./bash.nix
 	./zoxide.nix
 	./neovim.nix
+  ./kitty.nix
+  ./tmux.nix
  ];
 }

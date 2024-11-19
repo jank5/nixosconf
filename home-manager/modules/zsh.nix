@@ -8,7 +8,7 @@
 
 
     initExtra = ''
-    export EDITOR=nvim
+    export EDITOR=emacs
     eval "$(ssh-agent -s)"
     clear && pfetch
     '';
@@ -23,11 +23,13 @@
       	hms = "home-manager switch --flake ${flakeDir}";
 
       	conf = "nvim ${flakeDir}/nixos/configuration.nix";
+        monitor =  "xrandr --output DP-0 --primary --mode 2560x1440 --rate 144 --below DP-2 --output DP-2 --mode 2560x1440 --rate 143.97";
 
       	grep = "grep --color=auto";
       	c = "clear";
+      	cm = "/usr/bin/cm";
       	e = "emacs -nw";
-      	v = "nvim";
+      	v = "emacs -nw";
       	dv = "doas nvim";
       	ff = "fastfetch";
 	      ".." = "cd ..";
@@ -49,13 +51,14 @@
         killdwm = "pkill -KILL -u $USER";
         chqwe = "setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:alt_shift_toggle";
         chdvk = "setxkbmap -model pc105 -layout us,ru -variant dvorak -option grp:alt_shift_toggl";
+        # When problem with
+        svnl = "sudo virsh net-list --all";
+        svnd = "sudo virsh net-start default";
     };
-
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "sudo" "copyfile" ];
-      theme = "gianu";
-     # theme = "random"; 
+      theme = "random";
     };
   };
 }

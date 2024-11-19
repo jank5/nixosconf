@@ -1,0 +1,5 @@
+sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode disko /tmp/disk-config.nix
+nixos-generate-config —root /mnt(надо клонировать с гитхаба мой конфиг файл)
+nixos-install
+
+После установки, можно ребут либо до ребута юзать "passwd username" для добавления пользователя пароля
