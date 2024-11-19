@@ -8,12 +8,9 @@
   home.enableNixpkgsReleaseCheck = false;
   home.homeDirectory = "/home/zemo";
   home.stateVersion = "24.05";
-  home.packages = with pkgs; [
-  ];
-  home.file = {
-  };
-  home.sessionVariables = {
-  };
+  home.packages = with pkgs; [ ];
+  home.file = { };
+  home.sessionVariables = { };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

@@ -1,5 +1,7 @@
-{ config, pkgs, ... }: {
+{ lib, config, pkgs, ... }: {
   stylix.enable = true;
+
+
   stylix.base16Scheme = {
     base00 = "2b2b2b"; # background
     base01 = "323232"; # line cursor
@@ -21,20 +23,17 @@
 
   stylix.image = ./wallpaper.png;
 
- stylix.cursor = {
-   package = pkgs.bibata-cursors;
-   name = "Bibata-Modern-Ice";
-   size = 30;
- };
-
-  stylix.targets.gtk.enable = true;
+  stylix.autoEnable = false;
+  stylix.cursor.package = pkgs.bibata-cursors;
+  programs.regreet.name = "Bibata-Original-Ice";
+  stylix.cursor.size = 30;
+  services.xserver.desktopManager.plasma6.cursorTheme = "Bibata-Modern-Ice";
 
   stylix.fonts = {
     monospace = {
     package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
       name = "JetBrainsMono Nerd Font Mono";
-    };
-    sansSerif = {
+    }; sansSerif = {
     package = pkgs.dejavu_fonts;
       name = "DejaVu Sans";
     };

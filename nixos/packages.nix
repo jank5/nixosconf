@@ -162,6 +162,7 @@
   coreutils
   zip
   gzip
+  bibata-cursors
   ];
 
   fonts.packages = with pkgs; [
