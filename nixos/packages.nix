@@ -115,6 +115,8 @@
   xorg.xf86videonouveau
   xorg.libXinerama
   xorg.libX11.dev
+  xorg.xev
+  xorg.xmodmap
   xorg.libXft
   xorg.libXi
   #GNOME TOOLS(If i want to use gnome, need uncomment)
