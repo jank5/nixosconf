@@ -27,7 +27,6 @@
   stylix.cursor.package = pkgs.bibata-cursors;
   programs.regreet.name = "Bibata-Original-Ice";
   stylix.cursor.size = 30;
-  services.xserver.desktopManager.plasma6.cursorTheme = "Bibata-Modern-Ice";
 
   stylix.fonts = {
     monospace = {

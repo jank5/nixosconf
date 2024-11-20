@@ -14,7 +14,7 @@
 #    inputs.nixpkgs.follows = "nixpkgs";
 #  };
  };
-	outputs = { stylix, self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
+	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
 	let
 	   lib = nixpkgs.lib;
 	   system = "x86_64-linux";

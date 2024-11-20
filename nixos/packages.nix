@@ -28,6 +28,7 @@
   # CLI
   scrot
   wget
+  zerotierone
   vlc
   haruna
   doas
@@ -146,6 +147,7 @@
   wineWowPackages.stable
   # EDITOR
   vscodium
+  zettlr
 
   shellcheck
   multimarkdown
