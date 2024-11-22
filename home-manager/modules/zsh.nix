@@ -32,6 +32,8 @@
       	v = "nvim";
       	dv = "doas nvim";
       	ff = "fastfetch";
+        nf = "neofetch";
+        pf = "pfetch";
 	      ".." = "cd ..";
 	      "..." = "cd ../..";
 	      ".3" = "cd ../../..";
