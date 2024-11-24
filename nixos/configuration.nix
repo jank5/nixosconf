@@ -89,5 +89,21 @@ environment.gnome.excludePackages = with pkgs; [
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+# nix-ld
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+  fuse3
+  zlib
+  bash
+  stdenv.cc.cc
+  icu
+  nss
+  openssl
+  libgtkflow3
+  gtk4
+  curl
+  expat
+  ];
+
   system.stateVersion = "24.05";
 }

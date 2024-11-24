@@ -81,6 +81,8 @@
   floorp
   chromium
   brave
+  palemoon-bin
+  mullvad-browser
 
   libreoffice
   protonup-ng
@@ -155,6 +157,7 @@
   multimarkdown
   texlivePackages.markdown
   gjs
+  fuse3
   git-lfs
   matugen
   gnupg
@@ -167,6 +170,8 @@
   zip
   gzip
   bibata-cursors
+
+  anki
   ];
 
   fonts.packages = with pkgs; [
