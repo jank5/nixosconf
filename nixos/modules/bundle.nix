@@ -5,6 +5,5 @@
   ./nvidia.nix
   ./flatpak.nix
   ./openssh.nix
-#  ./stylix.nix
   ];
 }

@@ -45,6 +45,9 @@
   # KDE PLASMA 6
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+
+  programs.regreet.enable = true;
+
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.defaultSession = "plasma";
 
