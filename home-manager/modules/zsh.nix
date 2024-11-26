@@ -53,7 +53,8 @@
         killdwm = "pkill -KILL -u $USER";
         chqwe = "setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:alt_shift_toggle";
         chdvk = "setxkbmap -model pc105 -layout us,ru -variant dvorak -option grp:alt_shift_toggl";
-        # When problem with
+        pkt="pkill tmux";
+        # When problem with virt-manager
         svnl = "sudo virsh net-list --all";
         svnd = "sudo virsh net-start default";
     };
