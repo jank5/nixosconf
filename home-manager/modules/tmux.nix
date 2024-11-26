@@ -22,6 +22,8 @@ bind % split-window -h -c "#{pane_current_path}"
 set -s escape-time 0
 
 set -g mouse on
+set -g renumber-windows on
+setw -g mode-keys vi
 
 # navigate window
 bind-key h select-pane -L
@@ -37,15 +39,18 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'wfxr/tmux-fzf-url'
-# If i want theme cattpuccin
-# THEMES
-#set -g @plugin 'cattpuccin/tmux'
-set -g @plugin 'egel/tmux-gruvbox'
-set -g @tmux-gruvbox 'dark-transparent' # or 'light', 'dark-transparent', 'light-transparent'
+set -g @plugin 'omerxx/tmux-sessionx' # add new
+# THEME
+set -g @plugin "janoamaral/tokyo-night-tmux"
+set -g @tokyo-night-tmux_window_id_style digital
+set -g @tokyo-night-tmux_pane_id_style hsquare
+set -g @tokyo-night-tmux_zoom_id_style dsquare
+set -g @tokyo-night-tmux_show_datetime 0
+set -g @tokyo-night-tmux_date_format DMY
+set -g @tokyo-night-tmux_time_format 24H
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
 '';
-
   };
 }

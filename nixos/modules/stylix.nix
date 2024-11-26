@@ -24,8 +24,8 @@
   stylix.image = ./wallpaper.png;
 
   stylix.autoEnable = false;
-  stylix.cursor.package = pkgs.bibata-cursors;
-  programs.regreet.name = "Bibata-Original-Ice";
+#  stylix.cursor.package = pkgs.bibata-cursors;
+#  programs.regreet.name = "Bibata-Original-Ice";
   stylix.cursor.size = 30;
 
   stylix.fonts = {

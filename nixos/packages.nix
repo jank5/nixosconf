@@ -24,7 +24,9 @@
 
   # DWM
   dmenu
-  (dwmblocks.override { conf = /home/zemo/dwmblocks/blocks.h; })
+  (dwmblocks.override { conf = /home/zemo/suckless/dwmblocks/blocks.h; })
+  (dwm.override { conf = /home/zemo/suckless/dwm/config.h; })
+#  (st.override { conf = /home/zemo/suckless/st/config.h; })
   # CLI
   scrot
   wget
@@ -170,7 +172,6 @@
   zip
   gzip
   bibata-cursors
-
   anki
   ];
 
@@ -180,6 +181,7 @@
 	nerdfonts
 	comic-relief
 	jetbrains-mono
+  source-han-sans-japanese
+  source-han-serif-japanese
   ];
-
 }

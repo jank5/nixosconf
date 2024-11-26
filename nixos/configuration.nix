@@ -34,24 +34,17 @@
 # XSERVER
   services.xserver = {
     enable = true;
-#    displayManager = {
+    displayManager = {
 #      gdm.enable = true;
 #      lightdm.enable = true;
-#      startx.enable = true;
-#    };
+      startx.enable = true;
+    };
     windowManager.dwm.enable = true;
 };
-  services.xserver.digimend.enable = true;
+#  services.xserver.digimend.enable = true;
   # KDE PLASMA 6
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-# DWM
-  nixpkgs.overlays = [
-    (final: prev: {
-      dwm = prev.dwm.overrideAttrs (old: { src = /home/zemo/dwm ;});
-    })
-  ];
+#  services.displayManager.sddm.enable = true;
+#  services.desktopManager.plasma6.enable = true;
 
   # Exclude PKGS PLASMA 6
 environment.plasma6.excludePackages = with pkgs.kdePackages; [
