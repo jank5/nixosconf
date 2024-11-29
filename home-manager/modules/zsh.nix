@@ -9,6 +9,7 @@
 
     initExtra = ''
     export EDITOR=emacs
+    export PATH=/home/zemo/.config/emacs/bin:$PATH
     eval "$(ssh-agent -s)"
     clear && pfetch
     '';
@@ -28,7 +29,8 @@
       	grep = "grep --color=auto";
       	c = "clear";
       	cm = "/usr/bin/cm";
-      	e = "emacs -nw";
+      	de = "emacs --with-profile doom -nw"
+      	se = "emacs --with-profile spacemacs -nw"
       	v = "nvim";
       	dv = "doas nvim";
       	ff = "fastfetch";

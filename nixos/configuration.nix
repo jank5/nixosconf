@@ -46,10 +46,7 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  programs.regreet.enable = true;
-
   services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.defaultSession = "plasma";
 
   # Exclude PKGS PLASMA 6
 environment.plasma6.excludePackages = with pkgs.kdePackages; [
