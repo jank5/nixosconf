@@ -29,8 +29,8 @@
       	grep = "grep --color=auto";
       	c = "clear";
       	cm = "/usr/bin/cm";
-      	de = "emacs --with-profile doom -nw"
-      	se = "emacs --with-profile spacemacs -nw"
+      	de = "emacs --with-profile doom -nw";
+      	se = "emacs --with-profile spacemacs -nw";
       	v = "nvim";
       	dv = "doas nvim";
       	ff = "fastfetch";
