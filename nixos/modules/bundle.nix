@@ -1,9 +1,9 @@
 {
   imports = [
   ./doas.nix
-  ./steam.nix
+#  ./steam.nix
   ./nvidia.nix
-  ./flatpak.nix
-  ./openssh.nix
+#  ./flatpak.nix
+#  ./openssh.nix
   ];
 }

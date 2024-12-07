@@ -24,8 +24,9 @@
 
   # DWM
   dmenu
-  (dwmblocks.override { conf = /home/zemo/suckless/dwmblocks/blocks.h; })
-  (dwm.override { conf = /home/zemo/suckless/dwm/config.h; })
+# uncomment this line when install
+#  (dwmblocks.override { conf = /home/zemo/suckless/dwmblocks/blocks.h; })
+#  (dwm.override { conf = /home/zemo/suckless/dwm/config.h; })
 #  (st.override { conf = /home/zemo/suckless/st/config.h; })
   # CLI
   scrot

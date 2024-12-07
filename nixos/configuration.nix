@@ -34,32 +34,14 @@
 # XSERVER
   services.xserver = {
     enable = true;
-#    displayManager = {
+    displayManager = {
 #      gdm.enable = true;
 #      lightdm.enable = true;
-#      startx.enable = true;
-#    };
+      startx.enable = true;
+    };
     windowManager.dwm.enable = true;
 };
   services.xserver.digimend.enable = true;
-  # KDE PLASMA 6
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  services.displayManager.sddm.wayland.enable = true;
-
-  # Exclude PKGS PLASMA 6
-environment.plasma6.excludePackages = with pkgs.kdePackages; [
-  plasma-browser-integration
-  konsole
-  elisa
-];
-
-  # Exclude PKGS Gnome
-environment.gnome.excludePackages = with pkgs; [
-  gnome-photos
-  gnome-tour
-];
 
   # Configure keymap in X11
   services.xserver = {
@@ -80,25 +62,24 @@ environment.gnome.excludePackages = with pkgs; [
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
-# LibVirtd
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
+# LibVirtd(uncomment when install)
+#  virtualisation.libvirtd.enable = true;
+#  programs.virt-manager.enable = true;
 
-# nix-ld
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-  fuse3
-  zlib
-  bash
-  stdenv.cc.cc
-  icu
-  nss
-  openssl
-  libgtkflow3
-  gtk4
-  curl
-  expat
-  ];
-
-  system.stateVersion = "24.05";
+# nix-ld(uncomment when install)
+#  programs.nix-ld.enable = true;
+#  programs.nix-ld.libraries = with pkgs; [
+#  fuse3
+#  zlib
+#  bash
+#  stdenv.cc.cc
+#  icu
+#  nss
+#  openssl
+#  libgtkflow3
+#  gtk4
+#  curl
+#  expat
+#  ];
+  system.stateVersion = "24.11";
 }
